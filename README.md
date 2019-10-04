@@ -4,5 +4,5 @@ Rewilding in City is a tool for urban mediations between [...]
 
 
 
-![](img\screenshot.PNG)
+![](https://github.com/AirtesterLD/rewilding-in-city/blob/master/img/screenshot.PNG)
 
