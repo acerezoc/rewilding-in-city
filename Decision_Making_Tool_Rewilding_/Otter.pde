@@ -44,7 +44,7 @@ class otter {
     FoundsChoice.clear();
     if (Hexagons.get(loc).value < 3 && Hexagons.get(loc).value > 1.45 ) {
       locs.append(loc);
-      Hexagons.get(loc).value += 0.01;
+      Hexagons.get(loc).value += 0.01;  
     }
     if (Hexagons.get(loc).value>1.45) {
       location = GRID.Terrain[loc];

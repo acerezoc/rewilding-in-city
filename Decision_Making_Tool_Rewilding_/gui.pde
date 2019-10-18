@@ -108,21 +108,21 @@ void gui() {
     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
     ; 
 
-  cp5.addBang("Island")
+  cp5.addBang("Plant")
     .setColorForeground(color(105, 155, 155))
     .setPosition(width-150, height-300)
     .setSize(80, 40)
     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
     ;
 
-  cp5.addBang("Dredging")
+  cp5.addBang("Island")
     .setColorForeground(color(105, 155, 155))
     .setPosition(width-150, height-330)
     .setSize(80, 40)
     .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER)
     ;
 
-  cp5.addBang("Plant")
+  cp5.addBang("Dredging")
     .setColorForeground(color(105, 155, 155))
     .setPosition(width-150, height-360)
     .setSize(80, 40)

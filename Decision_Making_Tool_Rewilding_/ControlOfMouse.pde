@@ -12,6 +12,11 @@ void keyPressed() {
       TableRow row =HexagonsPoint.addRow();
       row.setInt("Index", i);
     }
+    for(int i :closedSet_neightbors){
+      TableRow row1 =SocialImpact.addRow();
+      row1.setInt("Index", i);
+    }
+ saveTable(SocialImpact, "data/outputTable2.csv");
     saveTable(HexagonsPoint, "data/outputTable.csv");
   }
 }

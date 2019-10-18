@@ -97,11 +97,13 @@ float year = 0;
 //---------------Table Save------------------------------
 Table table_output;
 Table HexagonsPoint;
-
+Table SocialImpact;
 //--------------------------------------------------------------------------------------------------------------
 void setup() {
   HexagonsPoint = new Table();
+  SocialImpact= new Table();
   HexagonsPoint.addColumn("Index", Table.INT);
+    SocialImpact.addColumn("Index", Table.INT);
   openSet = new IntList();
   mouseChoice = new IntList();
   Obstacles = new IntList();
@@ -125,9 +127,9 @@ void setup() {
   table_output.addColumn("X");
   table_output.addColumn("Y");
   DATA_Visulization = new DATA_Visulization(1, 1, 1);
-  LoadPicture1 = new LoadPicture("HEXAGON4.png", 2535/3.935, 3635/3.935);
-  LoadPicture2 = new LoadPicture("Background2.png", 7791/4, 4370/4);
-  LoadPicture3 = new LoadPicture("HEXAGON5_riverlevel3.png", 2535/3.935, 3635/3.935);
+  LoadPicture1 = new LoadPicture("HEXAGON4.png", 2535/3.935, 3635/3.935,255);
+  LoadPicture2 = new LoadPicture("Background2.png", 7791/4, 4370/4,255);
+  LoadPicture3 = new LoadPicture("HEXAGON5_riverlevel3.png", 2535/3.935, 3635/3.935,180);
   GRID = new GRID("Environment_POINT_dataREMAP(1).csv");
   for (Points P : GRID.points) {
     Hexagons.add(P);
@@ -168,7 +170,7 @@ void draw() {
     //--------------Threshold 1.45------------------------
     pushStyle();
     for (int i = 0; i < GRID.points.length; i ++) {
-      stroke(840-420*Hexagons.get(i).value, 50, 420*Hexagons.get(i).value-590);
+      stroke(255-80*Hexagons.get(i).value, 255-50*Hexagons.get(i).value, 255-50*Hexagons.get(i).value);
       strokeWeight(0.5);
       if (Hexagons.get(i).value>1.45) {
         GRID.points[i].display();
@@ -214,7 +216,7 @@ void draw() {
   if (Islands.size()>0) {
     for (int i : Islands) {
       noStroke();
-      fill(#83dfd2);
+      fill(#ef6a31);
       ellipse(Hexagons.get(i).x, Hexagons.get(i).y, 2, 2);
     }
   }
@@ -223,7 +225,7 @@ void draw() {
   if (Dredgings.size()>0) {
     for (int i : Dredgings) {
       noStroke();
-      fill(#3eadbe);
+      fill(#f29b53);
       ellipse(Hexagons.get(i).x, Hexagons.get(i).y, 2, 2);
     }
   }
@@ -232,7 +234,7 @@ void draw() {
   if (Plants.size()>0) {
     for (int i : Plants) {
       noStroke();
-      fill(#eeab81);
+      fill(#ef4d32);
       ellipse(Hexagons.get(i).x, Hexagons.get(i).y, 2, 2);
     }
   }
@@ -242,7 +244,7 @@ void draw() {
   if (Aerations.size()>0) {
     for (int i : Aerations) {
       noStroke();
-      fill(#9d3c11);
+      fill(#f9ceaa);
       ellipse(Hexagons.get(i).x, Hexagons.get(i).y, 2, 2);
     }
   }
@@ -258,7 +260,7 @@ void draw() {
     int v11 = 0;
     int v12 = 0;
     for (int i : closedSet_neightbors) {
-      stroke(#FAC92C);
+      stroke(#f18939);
       strokeWeight(0.3);
       GRID.points[i].display();
       v7 += GRID.SUM_public.get(i);
@@ -267,12 +269,12 @@ void draw() {
       v10 += GRID.SUM_reside.get(i);
       v11 += GRID.House_Pric.get(i);
       v12 += GRID.Household.get(i);
-      Value7_ave = v7/closedSet_neightbors.size();
-      Value8_ave = v8/closedSet_neightbors.size();
-      Value9_ave = v9/closedSet_neightbors.size();
-      Value10_ave = v10/closedSet_neightbors.size();
-      Value11_ave = v11/closedSet_neightbors.size();
-      Value12_ave = v12/closedSet_neightbors.size();
+      Value7_ave = v7;
+      Value8_ave = v8;
+      Value9_ave = v9;
+      Value10_ave = v10;
+      Value11_ave = v11/closedSet.size();
+      Value12_ave = v12/closedSet.size();
     }
   }
 

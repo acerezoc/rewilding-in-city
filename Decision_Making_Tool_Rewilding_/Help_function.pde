@@ -46,14 +46,17 @@ class LoadPicture {
   PImage Image;
   float scalex ;
   float scaley ;
-  LoadPicture(String PictureName, float scalex_, float scaley_) {
+  int trans;
+  LoadPicture(String PictureName, float scalex_, float scaley_, int trans_) {
     scalex = scalex_;
     scaley = scaley_;
+    trans = trans_;
     Image = loadImage(PictureName);
   }
   void  display() {  
     pushMatrix();
     translate(260.3, -82.58);
+    tint(255,trans);
     image(Image, 0, 0, scalex, scaley);
     popMatrix();
   }
@@ -75,11 +78,11 @@ void Legend(float x, float y, float low, float high, float value) {
   pushStyle();
   noStroke();
   if (value>low&&value<high) {
-    fill(#FFF53D);
+    fill(#569090);
   } else if (value<low) {
-    fill(#B83E04);
+    fill(#c7c7c7);
   } else {
-    fill(#5EB854);
+    fill(#1d5454);
   }
   ellipse(x, y, 10, 10);
   popStyle();

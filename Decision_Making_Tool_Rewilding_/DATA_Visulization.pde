@@ -57,12 +57,12 @@ class DATA_Visulization {
     text("Family_Income:"+Value12+"&&"+Value12_ave+"£/per/year", extend-move, y_hex+6*move+3*extend);
     fill(#3C6D28);
     text("BASICMAP", 100, 108+60);
-    text("SUITABILITYMAP", 100, 150+60);
-    text("CORRIDOR", 100, 190+60);//TITLE
+    text("SUITABILITY MAP", 100, 150+60);
+    text("EXISTING CORRIDOR", 100, 190+60);//TITLE
     text("Environment" + select_com, extend-move, y_hex+move+60);
-    Legend(extend-move-22, y_hex+move-5+60, 1.2, 1.5, select_com+60); 
+    Legend(extend-move-22, y_hex+move-5+60, 1.2, 1.5, select_com); 
     text("SUM:"+sumnum+"    number:"+openSet.size(), extend-move, y_hex+2*move+60);
-    Legend(extend-move-22, y_hex+2*move-5+60, 1.58, 1.65, sumnum/openSet.size()); 
+    Legend(extend-move-22, y_hex+2*move-5+60, 1.2, 1.45, sumnum/openSet.size()-year*0.017); 
     text("Social", extend-move, y_hex-move+3*extend);
     text("Cost:" +Cost+"      DAY:" + DAY, extend-move, y_hex-move+5*extend);
     text("Year:" +year, extend-move, y_hex-move+5*extend+15);
@@ -84,29 +84,30 @@ class DATA_Visulization {
     text(Aerations.size(), width-50, height-365);
     pushStyle();
     noStroke();
-    fill(#9d3c11);
+    fill(#f9ceaa);
     ellipse(width-200, height-370, 10, 10);
     popStyle(); 
 
-    text(Plants.size(), width-50, height-335);
+    text(Dredgings.size(), width-50, height-335);
     pushStyle();
     noStroke();
-    fill(#eeab81);
+    fill(#f29b53);
     ellipse(width-200, height-340, 10, 10);
     popStyle();
 
-    text(Dredgings.size(), width-50, height-305);
+    text(Islands.size(), width-50, height-305);
     pushStyle();
     noStroke();
-    fill(#3eadbe);
+    fill(#ef6a31);
     ellipse(width-200, height-310, 10, 10);
     popStyle();
 
-    text(Islands.size(), width-50, height-275);
+   text(Plants.size(), width-50, height-275);
     pushStyle();
     noStroke();
-    fill(#83dfd2);
+    fill(#ef4d32);
     ellipse(width-200, height-280, 10, 10);
     popStyle();
+
   }
 }
