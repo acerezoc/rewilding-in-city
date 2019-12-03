@@ -22,7 +22,7 @@ Before we use the tool, we need a guideline about the Lea Valley, the location. 
 
 ### **Suitability Map**
 
-![bigmap-2](C:\dev\rewilding-in-city\img\bigmap-2.jpg)
+![bigmap-2]( https://github.com/AirtesterLD/rewilding-in-city/tree/master/img/bigmap-2.jpg)
 
 ### Social Map
 
